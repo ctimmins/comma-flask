@@ -3,6 +3,7 @@ Flask==0.12.2
 flask-marshmallow==0.8.0
 Flask-Script==2.0.6
 Flask-SQLAlchemy==2.3.2
+Flask-Cors==3.0.4
 itsdangerous==0.24
 Jinja2==2.10
 MarkupSafe==1.0
@@ -15,4 +16,5 @@ Werkzeug==0.14.1
 scipy==0.19.1
 numpy==1.13.1
 geojson==2.3.0
+
 

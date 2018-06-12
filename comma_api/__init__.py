@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_marshmallow import Marshmallow
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS, cross_origin
 import psycopg2
 
 from config import config
@@ -29,6 +30,7 @@ def create_app(config_name):
     app = Flask(__name__)
     app.config.from_object(config[config_name])
 
+    CORS(app)
     db.init_app(app)
     ma.init_app(app)
 

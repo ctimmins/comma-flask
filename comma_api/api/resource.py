@@ -30,7 +30,7 @@ def get_points_by_bbox(min_lat, min_lng, max_lat, max_lng):
     coords = clean_coords(min_lat, min_lng, max_lat, max_lng)
     conn = get_db_conn()
     try:
-        limit = request.args.get('limit', 100)
+        limit = request.args.get('limit', 1000)
         offset = request.args.get('offset', 0)
         with conn.cursor() as cur:
             sql = """
@@ -65,7 +65,7 @@ def get_overview_by_bbox(min_lat, min_lng, max_lat, max_lng):
     coords = clean_coords(min_lat, min_lng, max_lat, max_lng)
     conn = get_db_conn()
     try:
-        limit = request.args.get('limit', 100)
+        limit = request.args.get('limit', 500)
         offset = request.args.get('offset', 0)
         with conn.cursor() as cur:
             sql = """
