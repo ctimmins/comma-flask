@@ -56,7 +56,7 @@ You can run Flask's local server by executing the manager script:
 queries the trips table for all the points and speed
 
 #### Get Route Overviews by Bounding Box
-` GET /api/v1/points/<min_lat>/<min_lng>/<max_lat>/<max_lng>[?limit=<limit>]`
+` GET /api/v1/overview/<min_lat>/<min_lng>/<max_lat>/<max_lng>[?limit=<limit>]`
 queries the trips_overview table to return routes by trip_id
 
 
